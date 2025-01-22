@@ -1,38 +1,38 @@
-"use client"
+"use client";
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { useLanguage } from './language-provider'
-import { Button } from '@/components/ui/button'
-import { Menu, Globe, Moon, Sun } from 'lucide-react'
-import { useTheme } from 'next-themes'
+import { useState } from "react";
+import Link from "next/link";
+import { useLanguage } from "./language-provider";
+import { Button } from "@/components/ui/button";
+import { Menu, Globe, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
+} from "@/components/ui/dropdown-menu";
 
 const translations = {
   zh: {
-    home: '首页',
-    tools: '工具',
-    about: '关于',
-    language: '语言',
+    home: "首页",
+    tools: "工具",
+    about: "关于",
+    language: "语言",
   },
   en: {
-    home: 'Home',
-    tools: 'Tools',
-    about: 'About',
-    language: 'Language',
+    home: "Home",
+    tools: "Tools",
+    about: "About",
+    language: "Language",
   },
-}
+};
 
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { language, setLanguage } = useLanguage()
-  const { theme, setTheme } = useTheme()
-  const t = translations[language]
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
+  const { theme, setTheme } = useTheme();
+  const t = translations[language];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -43,13 +43,22 @@ export function Header() {
 
         <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
           <div className="flex items-center space-x-6">
-            <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link
+              href="/"
+              className="text-sm font-medium transition-colors hover:text-primary"
+            >
               {t.home}
             </Link>
-            <Link href="/tools" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link
+              href="/tools"
+              className="text-sm font-medium transition-colors hover:text-primary"
+            >
               {t.tools}
             </Link>
-            <Link href="/about" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link
+              href="/about"
+              className="text-sm font-medium transition-colors hover:text-primary"
+            >
               {t.about}
             </Link>
           </div>
@@ -62,10 +71,10 @@ export function Header() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setLanguage('zh')}>
+                <DropdownMenuItem onClick={() => setLanguage("zh")}>
                   中文
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage('en')}>
+                <DropdownMenuItem onClick={() => setLanguage("en")}>
                   English
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -92,5 +101,5 @@ export function Header() {
         </Button>
       </nav>
     </header>
-  )
+  );
 }
