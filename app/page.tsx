@@ -1,9 +1,9 @@
 'use client';
 
 import { useLanguage } from '@/components/language-provider';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { getDictionary } from '@/i18n';
+import { GradientButton } from '@/components/gradient-button';
 
 export default function Home() {
   const { language } = useLanguage();
@@ -18,9 +18,7 @@ export default function Home() {
         <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
           {t.hero.subtitle}
         </p>
-        <Button size="lg" className="h-12 px-8">
-          {t.hero.cta}
-        </Button>
+        <GradientButton>{t.hero.cta}</GradientButton>
       </section>
 
       <section className="w-full bg-muted/50 py-24">

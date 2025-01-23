@@ -46,4 +46,7 @@ export const en = {
     about: 'About',
     language: 'Language',
   },
+  ai: {
+    title: 'AI Coding Tools',
+  },
 };

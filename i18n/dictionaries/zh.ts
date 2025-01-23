@@ -46,4 +46,7 @@ export const zh = {
     about: '关于',
     language: '语言',
   },
+  ai: {
+    title: 'AI编程工具',
+  },
 };
