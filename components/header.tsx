@@ -32,10 +32,7 @@ export function Header() {
             <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
               {t.header.home}
             </Link>
-            <Link
-              href="/tools"
-              className="text-sm font-medium transition-colors hover:text-primary"
-            >
+            <Link href="/ai" className="text-sm font-medium transition-colors hover:text-primary">
               {t.header.tools}
             </Link>
             <Link
