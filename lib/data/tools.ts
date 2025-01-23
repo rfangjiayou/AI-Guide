@@ -34,3 +34,7 @@ export function getTools(): Tool[] {
     // 更多工具...
   ];
 }
+
+export function getToolById(id: string): Tool | undefined {
+  return getTools().find((tool) => tool.id === id);
+}

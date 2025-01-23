@@ -49,4 +49,8 @@ export const zh = {
   ai: {
     title: 'AI编程工具',
   },
+  aiDetail: {
+    features: '主要功能',
+    website: '访问官网',
+  },
 };

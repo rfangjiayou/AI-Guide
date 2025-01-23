@@ -49,4 +49,8 @@ export const en = {
   ai: {
     title: 'AI Coding Tools',
   },
+  aiDetail: {
+    features: 'Key Features',
+    website: 'Visit Website',
+  },
 };
