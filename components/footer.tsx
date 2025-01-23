@@ -1,22 +1,12 @@
-"use client";
+'use client';
 
-import { useLanguage } from "./language-provider";
-import { Github } from "lucide-react";
-
-const translations = {
-  zh: {
-    description: "发现和探索最好的 AI 工具",
-    copyright: "版权所有",
-  },
-  en: {
-    description: "Discover and explore the best AI tools",
-    copyright: "Copyright",
-  },
-};
+import { useLanguage } from './language-provider';
+import { Github } from 'lucide-react';
+import { getDictionary } from '@/i18n';
 
 export function Footer() {
   const { language } = useLanguage();
-  const t = translations[language];
+  const t = getDictionary(language);
   const year = new Date().getFullYear();
 
   return (
@@ -25,9 +15,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <h2 className="text-2xl font-bold">AI Navigator</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              {t.description}
-            </p>
+            <p className="mt-2 text-sm text-muted-foreground">{t.footer.description}</p>
           </div>
           <div className="md:text-center lg:text-left">
             <a
@@ -43,7 +31,7 @@ export function Footer() {
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
           <p>
-            {t.copyright} © {year} AI Navigator. All rights reserved.
+            {t.footer.copyright} © {year} AI Navigator. All rights reserved.
           </p>
         </div>
       </div>
