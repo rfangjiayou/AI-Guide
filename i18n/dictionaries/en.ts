@@ -52,5 +52,8 @@ export const en = {
   aiDetail: {
     features: 'Key Features',
     website: 'Visit Website',
+    back: 'Back to List',
+    description: 'Description',
+    example: 'Examples',
   },
 };

@@ -52,5 +52,8 @@ export const zh = {
   aiDetail: {
     features: '主要功能',
     website: '访问官网',
+    back: '返回列表',
+    description: '工具介绍',
+    example: '使用示例',
   },
 };
